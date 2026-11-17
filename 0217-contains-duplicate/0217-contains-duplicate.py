@@ -4,13 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        mp = {}
-
-        for num in nums:
-            mp[num] = mp.get(num, 0) + 1
-
-            if mp[num] > 1:
-                return True
-
-        return False
+        if len(set(nums))==len(nums):
+            return False    
+        else:
+            return True
         
